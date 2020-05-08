@@ -158,4 +158,17 @@ router.get('/isepr', function(req, res, _) {
     res.status(200).sendFile(fileName, {root: reqPath});
 });
 
+/**
+ * It removes the old outputs files
+ */
+router.get('/cleanData', function (req, res, _) {
+    const cmd = 'rm sbf_lib/test-app/output/*';
+    exec(execArguments, (err, stdout, stderr) => {
+        if (err) {
+            console.error(`exec error: ${err}`);
+            return;
+        }
+    });
+});
+
 module.exports = router;

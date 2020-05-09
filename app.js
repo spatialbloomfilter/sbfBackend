@@ -43,8 +43,8 @@ app.use(function(err, req, res, next) {
   // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
-  res.header("Access-Control-Allow-Origin", "https://spatialbloomfilter.github.io");
-  // res.header("Access-Control-Allow-Origin", "http://localhost:4200");
+  //res.header("Access-Control-Allow-Origin", "https://spatialbloomfilter.github.io");
+   res.header("Access-Control-Allow-Origin", "http://localhost:4200");
 
   // render the error page
   res.status(err.status || 500);

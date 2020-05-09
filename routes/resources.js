@@ -71,7 +71,7 @@ router.get('/calculateFilter', function(req, res, _) {
     // console.log(execArguments);
     const { exec } = require('child_process');
 
-    exec(execArguments, (err, stdout, stderr) => {
+    exec(execArguments, (err, stdout, _) => {
         if (err) {
             console.error(`exec error: ${err}`);
             return;
@@ -158,17 +158,5 @@ router.get('/isepr', function(req, res, _) {
     res.status(200).sendFile(fileName, {root: reqPath});
 });
 
-/**
- * It removes the old outputs files
- */
-router.get('/cleanData', function (req, res, _) {
-    const cmd = 'rm sbf_lib/test-app/output/*';
-    exec(execArguments, (err, stdout, stderr) => {
-        if (err) {
-            console.error(`exec error: ${err}`);
-            return;
-        }
-    });
-});
 
 module.exports = router;

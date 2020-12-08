@@ -13,7 +13,7 @@
     "count-lines-in-file": "^1.1.0",
     "debug": "~2.6.9",
     "express": "~4.16.1",
-    "fast-csv": "^4.0.2",
+    "fast-csv": "^4.3.6",
     "http-errors": "~1.6.3",
     "morgan": "~1.9.1",
     "multer": "^1.4.2",
